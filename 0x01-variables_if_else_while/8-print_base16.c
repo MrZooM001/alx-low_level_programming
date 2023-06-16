@@ -6,7 +6,8 @@
 */
 int main(void)
 {
-for (int n = 48; n <= 122; n++)
+int n;
+for (n = 48; n <= 122; n++)
 {
 if (n >= 48 && n <= 57)
 {

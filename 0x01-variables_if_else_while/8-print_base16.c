@@ -7,13 +7,13 @@
 int main(void)
 {
 int n;
-for (n = 48; n <= 122; n++)
+for (n = 48; n <= 102; n++)
 {
 if (n >= 48 && n <= 57)
 {
 putchar(n);
 }
-else if (n >= 97 && n <= 122)
+else if (n >= 97 && n <= 102)
 {
 putchar(n);
 }

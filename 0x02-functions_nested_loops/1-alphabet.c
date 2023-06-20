@@ -1,16 +1,20 @@
-#include "main.h"
+#include <unistd.h>
 
 /**
- * main - Start point of the program
- * Description: Print a message using nested functions
+ * print_alphabet - writes alphabet in lowercase
  *
- * Return: 1 if success
- * On error, -1 is returned, and errno is set appropriately.
+ * Return: void
  */
-int main(void)
+void print_alphabet(void)
 {
+char c;
+int _putchar(char c);
 
-print_alphabet();
-
-return (0);
+c = 'a';
+while (c <= 'z')
+{
+_putchar(c);
+c++;
+}
+_putchar('\n');
 }

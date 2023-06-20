@@ -13,7 +13,7 @@ if (ldig < 0)
 {
 ldig = ldig * -1;
 }
-_putchar(ldig);
+_putchar(ldig + '0');
 
 return (ldig);
 }

@@ -18,34 +18,34 @@ for (j = 0; j <= n; j++)
 {
 x = i * j;
 if (j == 0)
-putchar('0');
+_putchar('0');
 else if (x < 10)
 {
-putchar(',');
-putchar(' ');
-putchar(' ');
-putchar(' ');
-putchar('0' + x % 10);
+_putchar(',');
+_putchar(' ');
+_putchar(' ');
+_putchar(' ');
+_putchar('0' + x % 10);
 }
 else if (x >= 10 && x < 100)
 {
-putchar(',');
-putchar(' ');
-putchar(' ');
-putchar('0' + (x / 10) % 10);
-putchar('0' + x % 10);
+_putchar(',');
+_putchar(' ');
+_putchar(' ');
+_putchar('0' + (x / 10) % 10);
+_putchar('0' + x % 10);
 }
 else if (x > 99 && x < 1000)
 {
-putchar(',');
-putchar(' ');
-putchar('0' + x / 100);
-putchar('0' + (x / 10) % 10);
-putchar('0' + x % 10);
+_putchar(',');
+_putchar(' ');
+_putchar('0' + x / 100);
+_putchar('0' + (x / 10) % 10);
+_putchar('0' + x % 10);
 }
 }
 j = 0;
-putchar('\n');
+_putchar('\n');
 }
 }
 }

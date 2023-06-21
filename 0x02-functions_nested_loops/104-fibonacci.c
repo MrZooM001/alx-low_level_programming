@@ -2,7 +2,7 @@
 
 /**
  * main - Start point of the program
- * Description: Prints the first 50 Fibonacci numbers,
+ * Description: Prints the first 98 Fibonacci numbers,
  * starting with 1 and 2, followed by a new line.
  *
  * Return: 0 if success
@@ -14,10 +14,10 @@ int i;
 
 a = 0;
 b = 1;
-for (i = 1; i <= 50; i++)
+for (i = 1; i <= 98; i++)
 {
 r = a + b;
-if (i < 50)
+if (i < 98)
 {
 printf("%li, ", r);
 }

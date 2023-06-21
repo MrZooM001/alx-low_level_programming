@@ -9,7 +9,7 @@
  */
 int main(void)
 {
-long int a, b, r;
+unsigned long int a, b, r;
 int i;
 
 a = 0;
@@ -19,11 +19,11 @@ for (i = 1; i <= 98; i++)
 r = a + b;
 if (i < 98)
 {
-printf("%li, ", r);
+printf("%lu, ", r);
 }
 else
 {
-printf("%li\n", r);
+printf("%lu\n", r);
 }
 a = b;
 b = r;

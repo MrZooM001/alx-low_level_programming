@@ -11,7 +11,6 @@
 int main(void)
 {
 long int a, b, r, s;
-int i;
 
 a = 0;
 b = 1;

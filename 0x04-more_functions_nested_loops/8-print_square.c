@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * print_square - prints a square
- * @n: An integer number
+ * print_square - A function that draws a diagonal line on terminal
+ * @size: An integer number
  *
  * Return: void
  */
@@ -18,12 +18,16 @@ while (i < size)
 {
 while (j < size)
 {
-putchar(35);
+_putchar(35);
 j++;
 }
 i++;
 j = 0;
-putchar('\n');
+_putchar('\n');
 }
+}
+else
+{
+_putchar('\n');
 }
 }

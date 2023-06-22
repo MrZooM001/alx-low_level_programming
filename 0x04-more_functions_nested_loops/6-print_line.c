@@ -17,5 +17,8 @@ for (i = 0; i < n; i++)
 _putchar(95);
 }
 }
+else
+{
 _putchar('\n');
+}
 }

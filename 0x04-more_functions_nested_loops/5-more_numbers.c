@@ -17,17 +17,17 @@ while (n <= 14)
 {
 if (n <= 9)
 {
-putchar(n + '0');
+_putchar(n + '0');
 }
 else
 {
-putchar(n / 10 + '0');
-putchar(n % 10 + '0');
+_putchar(n / 10 + '0');
+_putchar(n % 10 + '0');
 }
 n++;
 }
 i++;
 n = 0;
-putchar('\n');
+_putchar('\n');
 }
 }

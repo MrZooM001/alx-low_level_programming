@@ -7,27 +7,18 @@
  */
 void more_numbers(void)
 {
-int n, i;
+int i, j;
 
-n = 0;
-i = 0;
-while (i < 10)
+for (i = 1; i <= 10; i++)
 {
-while (n <= 14)
+for (j = 0; j <= 14; j++)
 {
-if (n <= 9)
+if (j >= 10)
 {
-_putchar(n + '0');
+_putchar(49);
 }
-else
-{
-_putchar(n / 10 + '0');
-_putchar(n % 10 + '0');
+_putchar(j % 10 + '0');
 }
-n++;
-}
-i++;
-n = 0;
 _putchar('\n');
 }
 }

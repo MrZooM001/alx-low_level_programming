@@ -1,20 +1,22 @@
 #include "main.h"
 
 /**
- * print_triangle -  prints a triangle using the character #
+ * print_triangle -  prints a triangle
  * @size: An integer number
  *
  * Return: void
  */
 void print_triangle(int size)
 {
-int i, j, x;
+int i;
+int j;
+int x;
 
 i = 0;
 j = 0;
-x = size - 2;
 if (size > 0)
 {
+x = size - 2;
 while (i < size)
 {
 while (j < size)

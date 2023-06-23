@@ -8,26 +8,21 @@
  */
 void print_number(int n)
 {
-int r;
+unsigned int x;
 
-r = 0;
-if (n == 0)
-{
-_putchar('0');
-}
+x = 0;
 if (n < 0)
 {
-_putchar('-');
-n = -n;
+_putchar(45);
+x = -n;
 }
-while (n > 0)
+else
 {
-r = r * 10 + n % 10;
-n = n / 10;
+x = n;
 }
-while (r > 0)
+if (x / 10)
 {
-_putchar((r % 10) + '0');
-r = r / 10;
+print_number(x / 10);
 }
+_putchar((x % 10) + 48);
 }

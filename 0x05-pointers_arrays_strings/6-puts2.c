@@ -10,27 +10,11 @@
  */
 void puts2(char *str)
 {
-if (*str % 2 == 0)
+int i = 0;
+while (str[i] != '\0')
 {
-while (*str != '\0')
-{
-if (*str % 2 == 0)
-{
-_putchar(*str);
-}
-str++;
-}
-}
-else if (*str % 2 != 0)
-{
-while (*str != '\0')
-{
-if (*str % 2 != 0)
-{
-_putchar(*str);
-}
-str++;
-}
+_putchar(str[i]);
+i += 2;
 }
 _putchar('\n');
 }

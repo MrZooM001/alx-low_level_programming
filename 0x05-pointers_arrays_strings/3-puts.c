@@ -2,7 +2,7 @@
 
 /**
  * _puts - prints a string, followed by a new line, to stdout.
- * @s: Pointer to a string.
+ * @str: Pointer to a string.
  * Description: A function that prints a string,
  * followed by a new line, to standard output.
  *

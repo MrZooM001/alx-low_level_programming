@@ -31,7 +31,7 @@ first_index = (length - 1) / 2;
 }
 for (i = first_index; i < length; i++)
 {
-putchar(str[i]);
+_putchar(str[i]);
 }
-putchar('\n');
+_putchar('\n');
 }

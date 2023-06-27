@@ -29,7 +29,7 @@ else
 {
 first_index = (length - 1) / 2;
 }
-for (i = first_index - 1; str[i] != '\0' ; i++)
+for (i = first_index; str[i] != '\0' ; i++)
 {
 _putchar(str[i]);
 }

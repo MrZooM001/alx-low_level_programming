@@ -16,7 +16,7 @@ while (*str != '\0')
 {
 if (*str % 2 == 0)
 {
-putchar(*str);
+_putchar(*str);
 }
 str++;
 }
@@ -27,10 +27,10 @@ while (*str != '\0')
 {
 if (*str % 2 != 0)
 {
-putchar(*str);
+_putchar(*str);
 }
 str++;
 }
 }
-putchar('\n');
+_putchar('\n');
 }

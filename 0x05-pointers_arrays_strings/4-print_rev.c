@@ -17,7 +17,8 @@ while (*s != '\0')
 length++;
 s++;
 }
-while (length + 1 != 0)
+s--;
+while (length > 0)
 {
 _putchar(*s);
 length--;

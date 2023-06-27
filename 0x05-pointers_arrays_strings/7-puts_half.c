@@ -29,12 +29,8 @@ else
 {
 first_index = (length - 1) / 2;
 }
-for (i = first_index; str[i] != '\0' ; i++)
+for (i = first_index - 1; str[i] != '\0' ; i++)
 {
-if (str[i] == '\0')
-{
-  break;
-}
 _putchar(str[i]);
 }
 _putchar('\n');

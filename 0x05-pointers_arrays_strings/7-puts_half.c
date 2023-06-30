@@ -21,6 +21,7 @@ while (str[i] != '\0')
 length++;
 i++;
 }
+length--;
 if (length % 2 == 0)
 {
 first_index = length / 2;

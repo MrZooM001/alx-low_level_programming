@@ -8,19 +8,20 @@
  */
 char *rot13(char *str)
 {
-char *ptr = str;
+int i, j;
+char alpha1[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+char alpha2[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
-while (*ptr != '\0')
+for (i = 0; str[i] != '\0'; i++)
 {
-if ((*ptr >= 'a' && *ptr <= 'm') || (*ptr >= 'A' && *ptr <= 'M'))
+for (j = 0; j < 52; j++)
 {
-*ptr += 13;
+if (str[i] == alpha1[j])
+{
+str[i] = alpha2[j];
+break;
 }
-else if ((*ptr >= 'n' && *ptr <= 'z') || (*ptr >= 'N' && *ptr <= 'Z'))
-{
-*ptr -= 13;
 }
-ptr++;
 }
 
 return (str);

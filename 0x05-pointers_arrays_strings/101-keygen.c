@@ -9,7 +9,7 @@
  */
 int main(void)
 {
-int pwd_length = 8;
+int pwd_length = 16;
 char password[pwd_length];
 int i, sum, n;
 

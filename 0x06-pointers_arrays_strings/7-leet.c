@@ -35,6 +35,10 @@ else if ((c == 'l') || (c == 'L'))
 {
 *ptr = '1';
 }
+else
+{
+*ptr = *ptr;
+}
 ptr++;
 }
 

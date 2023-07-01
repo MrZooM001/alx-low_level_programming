@@ -12,25 +12,20 @@
  */
 void puts_half(char *str)
 {
-int first_index;
+int i;
+int start = 0;
 int length = 0;
-int i = 0;
 
-while (str[i] != '\0')
+for (i = 0; str[i] != '\0'; i++)
 {
 length++;
-i++;
 }
-length--;
-if (length % 2 == 0)
+start = (length / 2);
+if ((length % 2) == 1)
 {
-first_index = length / 2;
+start = ((length + 1) / 2);
 }
-else
-{
-first_index = (length - 1) / 2;
-}
-for (i = first_index; str[i] != '\0' ; i++)
+for (i = start; str[i] != '\0' ; i++)
 {
 _putchar(str[i]);
 }

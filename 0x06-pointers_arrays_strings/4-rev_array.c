@@ -15,7 +15,7 @@ int arr_end = n - 1;
 
 while (arr_start < arr_end)
 {
-int tmp = a[arr_start];
+tmp = a[arr_start];
 a[arr_start] = a[arr_end];
 a[arr_end] = tmp;
 arr_start++;

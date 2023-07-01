@@ -11,11 +11,14 @@ char *cap_string(char *str)
 int i = 0;
 int cap_nxt = 1;
 
-while(str[i] != '\0')
+while (str[i] != '\0')
 {
-if (str[i] == ',' || str[i] == ';' || str[i] == '.' || str[i] == '!' || str[i] == '?' ||
-str[i] == '"' || str[i] == '(' || str[i] == ')' || str[i] == '{' || str[i] == '}' ||
-str[i] == ' ' || str[i] == '\n' || str[i] == '\t')
+if (str[i] == ',' || str[i] == ';' || str[i] == '.' ||
+str[i] == '!' || str[i] == '?' ||
+str[i] == '"' || str[i] == '(' ||
+str[i] == ')' || str[i] == '{' ||
+str[i] == '}' || str[i] == ' ' ||
+str[i] == '\n' || str[i] == '\t')
 {
 cap_nxt = 1;
 }

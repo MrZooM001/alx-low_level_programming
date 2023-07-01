@@ -8,38 +8,19 @@
  */
 char *leet(char *str)
 {
-char *ptr = str;
-char c;
+int i, j;
+char ltrs[] = "aAeEoOtTlL";
+char nums[] = "4433007711";
 
-while (*ptr != '\0')
+for (i = 0; str[i] != '\0'; i++)
 {
-c = *ptr;
-
-if ((c == 'a') || (c == 'A'))
+for (j = 0; j < 10; j++)
 {
-*ptr = '4';
+if (str[i] == ltrs[j])
+{
+str[i] = nums[j];
 }
-else if ((c == 'e') || (c == 'E'))
-{
-*ptr = '3';
 }
-else if ((c == 'o') || (c == 'O'))
-{
-*ptr = '0';
-}
-else if ((c == 't') || (c == 'T'))
-{
-*ptr = '7';
-}
-else if ((c == 'l') || (c == 'L'))
-{
-*ptr = '1';
-}
-else
-{
-*ptr = *ptr;
-}
-ptr++;
 }
 
 return (str);

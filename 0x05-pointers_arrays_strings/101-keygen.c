@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <time.h>
 
+#define PWD_LENGTH 16
+
 /**
  * main - Start point
  *
@@ -9,13 +11,12 @@
  */
 int main(void)
 {
-int pwd_length = 16;
-char password[pwd_length];
+char password[PWD_LENGTH];
 int i, sum, n;
 
 sum = 0;
 srand(time(NULL));
-for (i = 0; i < pwd_length; i++) {
+for (i = 0; i < PWD_LENGTH; i++) {
 password[i] = rand() % 78 + '0';
 putchar(password[i]);
 sum += (password[i] - '0');

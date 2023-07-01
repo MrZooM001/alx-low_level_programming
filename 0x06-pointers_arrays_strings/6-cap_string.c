@@ -8,15 +8,27 @@
  */
 char *cap_string(char *str)
 {
-char *ptr = str;
+int i = 0;
+int cap_nxt = 1;
 
-while (*ptr != '\0')
+while(str[i] != '\0')
 {
-if (*ptr >= 'A' && *ptr <= 'Z')
+if (str[i] == ',' || str[i] == ';' || str[i] == '.' || str[i] == '!' || str[i] == '?' ||
+str[i] == '"' || str[i] == '(' || str[i] == ')' || str[i] == '{' || str[i] == '}' ||
+str[i] == ' ' || str[i] == '\n' || str[i] == '\t')
 {
-*ptr = *ptr + ('a' - 'A');
+cap_nxt = 1;
 }
-ptr++;
+else if (cap_nxt && (str[i] >= 'a' && str[i] <= 'z'))
+{
+str[i] = str[i] - ('a' - 'A');
+cap_nxt = 0;
+}
+else
+{
+cap_nxt = 0;
+}
+i++;
 }
 
 return (str);

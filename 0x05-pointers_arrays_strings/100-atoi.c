@@ -8,20 +8,17 @@
  */
 int _atoi(char *s)
 {
-int i, j, x, length, num, result;
-
-i = 0; /* Iteration to keep track of the current position in the string */
-j = 0; /* the number of negative signs encountered */
-x = 0; /* a flag for indicating whether a number has been found */
-length = 0; /* the length of the string */
-num = 0; /* the current digit */
-result = 0; /* the final result */
+int i = 0; /*iteration to keep track of the current position in the string*/
+int j = 0; /*number of negative signs encountered*/
+int x = 0; /*a flag for indicating whether a number has been found*/
+int length = 0; /*length of the string */
+int num = 0; /*current digit */
+int result = 0; /*final result */
 
 while (s[length] != '\0')
 {
 length++;
 }
-
 while (i < length && x == 0)
 {
 if (s[i] == '-')

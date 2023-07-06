@@ -21,4 +21,8 @@ int is_prime_number(int n);
 
 int _prime_number_helper(int n, int d);
 
+int _str_length(char *s);
+
+int _palindrome_helper(char *s, int x, int y);
+
 #endif

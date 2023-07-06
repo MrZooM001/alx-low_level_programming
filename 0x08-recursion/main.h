@@ -19,4 +19,6 @@ int _sqrt_helper(int n, int x);
 
 int is_prime_number(int n);
 
+int _prime_number_helper(int n, int d);
+
 #endif

@@ -47,14 +47,10 @@ return (_palindrome_helper(s, x + 1, y - 1));
  */
 int _str_length(char *s)
 {
-int length;
-
-length = 0;
-while (*s != '\0')
+if (*s != '\0')
 {
-length++;
-s++;
+return (0);
 }
 
-return (length);
+return (1 + _str_length(s + 1));
 }

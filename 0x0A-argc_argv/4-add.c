@@ -29,13 +29,8 @@ printf("Error\n");
 return (1);
 }
 }
+}
 printf("%d\n", sum);
 
 return (0);
-}
-else
-{
-printf("0\n");
-return (1);
-}
 }

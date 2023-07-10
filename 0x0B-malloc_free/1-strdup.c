@@ -21,7 +21,7 @@ while (*(str + length) != '\0')
 {
 length++;
 }
-arr = malloc(length * sizeof(*arr) + 1);
+arr = malloc(((length)*(sizeof(*arr))) + 1);
 if (arr == NULL)
 return (NULL);
 

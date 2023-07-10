@@ -11,16 +11,18 @@
 
 int main(int argc, char *argv[])
 {
-int i, sum;
+int i, sum, digit;
+char *ptr;
 
 sum = 0;
 if (argc > 1)
 {
 for (i = 1; i < argc; i++)
 {
-if (*argv[i] >= '0' && *argv[i] <= '9')
+digit = strtol(argv[i], &ptr, 10);
+if (*ptr == '\0')
 {
-sum += atoi(argv[i]);
+sum += digit;
 }
 else
 {

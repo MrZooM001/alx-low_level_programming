@@ -29,7 +29,7 @@ return (0);
 change = 0;
 for (i = 0; i < 5 && money >= 0; i++)
 {
-while(money >= coins[i])
+while (money >= coins[i])
 {
 money -= coins[i];
 change++;

@@ -36,7 +36,7 @@ return (NULL);
 }
 
 j = 0;
-for (i = 0; i <= (s1_len + n); i++)
+for (i = 0; i < (s1_len + n); i++)
 {
 if (i < s1_len)
 {

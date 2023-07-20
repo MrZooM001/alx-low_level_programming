@@ -2,25 +2,6 @@
 #include "main.h"
 
 /**
- * _strlen - Function that gets string length.
- * @str: A pointer to character as a string.
- *
- * Return: An integer as length of a string.
- */
-int _strlen(char *str)
-{
-int length;
-
-length = 0;
-
-while (str[length] != '\0')
-{
-length++;
-}
-return (length);
-}
-
-/**
  * string_nconcat - Function that concatenates two strings.
  * @s1: A pointer to character as first string.
  * @s2: A pointer to character as second string.
@@ -31,8 +12,9 @@ return (length);
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-unsigned int i, j, s1_len, s2_len, total_length;
+unsigned int i, j, s1_len;
 char *ptr;
+char *str_len = s1;
 
 if (s1 == NULL)
 s1 = "";
@@ -40,33 +22,32 @@ s1 = "";
 if (s2 == NULL)
 s2 = "";
 
-s1_len = _strlen(s1);
-s2_len = _strlen(s2);
-
-if (n >= s2_len)
+s1_len = 0;
+while (*str_len != '\0')
 {
-total_length = s1_len + s2_len + 1;
+str_len++;
+s1_len++;
 }
 
-ptr = malloc(total_length);
+ptr = malloc(sizeof(*s1) * ((s1_len + n) + 1));
 if (ptr == NULL)
 {
 return (NULL);
 }
 
-i = 0;
-while (i < s1_len)
+j = 0;
+for (i = 0; i <= (s1_len + n); i++)
+{
+if (i < s1_len)
 {
 ptr[i] = s1[i];
-i++;
 }
-j = 0;
-while (j < s2_len)
+else
 {
-ptr[i + j] = s2[j];
-j++;
+ptr[i] = s2[j++];
 }
-ptr[i + j] = '\0';
+}
+ptr[i] = '\0';
 
 return (ptr);
 }

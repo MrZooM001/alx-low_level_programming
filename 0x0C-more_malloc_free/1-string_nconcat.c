@@ -23,13 +23,13 @@ if (s2 == NULL)
 s2 = "";
 
 s1_len = 0;
-while(*str_len != '\0')
+while (*str_len != '\0')
 {
 str_len++;
 s1_len++;
 }
 
- ptr = malloc(sizeof(*s1) * ((s1_len + n) + 1));
+ptr = malloc(sizeof(*s1) * ((s1_len + n) + 1));
 if (ptr == NULL)
 {
 return (NULL);

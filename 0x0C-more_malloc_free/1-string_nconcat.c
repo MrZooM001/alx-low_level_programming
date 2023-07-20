@@ -54,19 +54,19 @@ if (ptr == NULL)
 return (NULL);
 }
 
-j = 0;
-for (i = 0; i < (s1_len + n); i++)
-{
-if (i < s1_len)
+i = 0;
+while (i < s1_len)
 {
 ptr[i] = s1[i];
+i++;
 }
-else
+j = 0;
+while (j < s2_len)
 {
-ptr[i] = s2[j++];
+ptr[i + j] = s2[j];
+j++;
 }
-}
-ptr[i] = '\0';
+ptr[i + j] = '\0';
 
 return (ptr);
 }

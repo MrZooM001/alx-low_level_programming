@@ -2,6 +2,25 @@
 #include "dog.h"
 
 /**
+ * _strlen - A function that get length of string.
+ * @str: A pointer to character.
+ *
+ * Return: An integer as length of given string.
+ */
+int _strlen(char *str)
+{
+int length;
+
+length = 0;
+while (*str != '\0')
+{
+length++;
+str++;
+}
+return (length);
+}
+
+/**
  * _strcpy - A function that copy a string.
  * @dest: A pointer to character as destination string.
  * @src: A pointer to character as source string.
@@ -43,26 +62,16 @@ if (d == NULL)
 return (NULL);
 }
 
-length = 0;
-while (name[length] != '\0')
-{
-length++;
-}
-length++;
-n = malloc(sizeof(*owner) * length);
+length = _strlen(name) + 1;
+n = malloc(sizeof(*name) * length);
 if (n == NULL)
 {
 free(d);
 return (NULL);
 }
 
-length = 0;
-while (name[length] != '\0')
-{   
-length++;
-}
-length++;
-o = malloc(sizeof(*name) * length);
+length = _strlen(owner) + 1;
+o = malloc(sizeof(*owner) * length);
 if (o == NULL)
 {
 free(n);

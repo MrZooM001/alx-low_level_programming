@@ -21,21 +21,19 @@ return (length);
 }
 
 /**
- * _strcpy - A function that copy a string.
- * @dest: A pointer to character as destination string.
- * @src: A pointer to character as source string.
+ * _strcpy - copies the string pointed to in source.
+ * @dest: Pointer to a string.
+ * @src: Pointer to a string.
  *
- * Return: Pointer to dest
+ * Return: void.
  */
 char *_strcpy(char *dest, char *src)
 {
 int i;
 
-i = 0;
-while (src[i] != '\0')
+for (i = 0; *(src + i) != '\0'; i++)
 {
-dest[i] = src[i];
-i++;
+dest[i] = *(src + i);
 }
 dest[i] = '\0';
 

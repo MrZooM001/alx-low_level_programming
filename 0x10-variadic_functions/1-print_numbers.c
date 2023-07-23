@@ -27,5 +27,6 @@ printf("%s", separator);
 }
 }
 }
+va_end(args);
 _putchar('\n');
 }

@@ -70,11 +70,15 @@ spr = ", ";
 va_start(args, format);
 n = 0, i = 0;
 while (format != NULL && format[i] != '\0')
+{
 i++;
+}
 while (format != NULL && format[n] != '\0')
 {
 if (n == (i - 1))
+{
 spr = "";
+}
 switch (format[n])
 {
 case 'c':
@@ -96,6 +100,6 @@ break;
 }
 n++;
 }
+putchar('\n');
 va_end(args);
-_putchar('\n');
 }

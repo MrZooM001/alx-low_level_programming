@@ -18,9 +18,9 @@ c = 0;
 node = h;
 while (node != NULL)
 {
-if (h->str != NULL)
+if (node->str != NULL)
 {
-printf("[%u] %s\n", h->len, h->str);
+printf("[%u] %s\n", node->len, node->str);
 }
 else
 {

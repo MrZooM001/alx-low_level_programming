@@ -23,11 +23,14 @@ length = 0;
 node = malloc(sizeof(list_t));
 if (node == NULL)
 {
+free(node);
 return (NULL);
 }
 node->str = strdup(str);
 if (node->str == NULL)
 {
+free(node->str);
+free(node);
 return (NULL);
 }
 while (str[length] != '\0')

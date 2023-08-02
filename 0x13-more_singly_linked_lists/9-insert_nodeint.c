@@ -16,22 +16,18 @@ listint_t *current_node;
 listint_t *new_node;
 unsigned int i;
 
-if (head == NULL)
-{
-return (NULL);
-}
 i = 0;
-current_node = *head;
- if (current_node == NULL)
-{
+if (head == NULL)
 return (NULL);
-}
+
+current_node = *head;
+if (current_node == NULL)
+return (NULL);
 
 new_node = malloc(sizeof(listint_t));
 if (new_node == NULL)
-{
 return (NULL);
-}
+
 new_node->n = n;
 if (idx == 0)
 {

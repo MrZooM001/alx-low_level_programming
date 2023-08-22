@@ -10,7 +10,7 @@
 int clear_bit(unsigned long int *n, unsigned int index)
 {
 unsigned long int bit_calc;
-int bit_size = sizeof(*n) * 8;
+unsigned int bit_size = sizeof(*n) * 8;
 
 if (index >= bit_size)
 {

@@ -9,15 +9,13 @@
  */
 int set_bit(unsigned long int *n, unsigned int index)
 {
-unsigned long int *bit_value;
-
 if (index > 63)
 {
 return (-1);
 }
 else
 {
-*bit_value = *n | 1 << index;
+*n = *n | 1 << index;
 return (1);
 }
 }

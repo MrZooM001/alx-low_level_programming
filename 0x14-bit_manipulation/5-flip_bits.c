@@ -21,12 +21,9 @@ if ((n & 1) != (m & 1))
 {
 flip_nums++;
 }
-else
-{
 n >>= 1;
 m >>= 1;
 i++;
-}
 }
 return (flip_nums);
 }

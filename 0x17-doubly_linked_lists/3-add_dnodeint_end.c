@@ -15,10 +15,16 @@ return (NULL);
 
 new_list->n = n;
 new_list->next = NULL;
-new_list->prev = *head;
-if (*head != NULL)
-(*head)->next = new_list;
+if (*head == NULL)
+{
+new_list->prev = NULL;
 *head = new_list;
+return (new_list);
+}
+while ((*head)->next != NULL)
+*head = (*head)->next;
+(*head)->next = new_list;
+new_list->prev = *head;
 
-return (new_list->prev);
+return (new_list);
 }

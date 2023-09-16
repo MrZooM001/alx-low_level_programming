@@ -58,7 +58,6 @@ new_node->n = n;
 new_node->prev = current_node->prev;
 new_node->next = current_node;
 new_node->prev->next = new_node;
-*h = new_node;
 return (new_node);
 }
 current_node = current_node->next;

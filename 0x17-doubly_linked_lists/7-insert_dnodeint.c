@@ -10,14 +10,17 @@ size_t dlistint_len(const dlistint_t *h)
 {
 unsigned long i;
 
-i = 1;
+i = 0;
+if (h == NULL)
+return (i);
+
 while (h != NULL)
 {
 h = h->next;
 i++;
 }
 
-return (--i);
+return (i);
 }
 
 /**
@@ -42,7 +45,7 @@ return (add_dnodeint(h, n));
 
 if (idx == node_len)
 return (add_dnodeint_end(h, n));
-if (idx < 0 || idx > node_len)
+if (idx > node_len)
 return (NULL);
 
 new_node = malloc(sizeof(dlistint_t));

@@ -36,12 +36,14 @@ unsigned int i, node_len;
 if (h == NULL)
 return (NULL);
 
+node_len = dlistint_len(*h);
 if (idx == 0)
 return (add_dnodeint(h, n));
 
-node_len = dlistint_len(*h);
-if (idx == (node_len - 1))
+if (idx == node_len)
 return (add_dnodeint_end(h, n));
+if (idx < 0 || idx > node_len)
+return (NULL);
 
 new_node = malloc(sizeof(dlistint_t));
 if (new_node == NULL)

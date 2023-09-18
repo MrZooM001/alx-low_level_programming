@@ -1,5 +1,8 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
 #include "main.h"
-
 /**
  * _strncpy - Copy a string to another string
  * @dest: A pointer to character.

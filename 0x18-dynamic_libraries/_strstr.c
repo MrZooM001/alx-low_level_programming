@@ -1,5 +1,8 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
 #include "main.h"
-
 /**
  * _strstr - Locates a substring.
  * @haystack: A pointer to character.

@@ -1,5 +1,8 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
 #include "main.h"
-
 /**
  * _strpbrk - Search a string for any of a set of bytes.
  * @s: A pointer to character.

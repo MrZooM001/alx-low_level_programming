@@ -1,5 +1,8 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
 #include "main.h"
-
 /**
  * _strncat - Concatenates two strings with specific number of characters.
  * @dest: A pointer to character.

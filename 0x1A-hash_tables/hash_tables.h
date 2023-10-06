@@ -45,6 +45,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value);
 
 char *hash_table_get(const hash_table_t *ht, const char *key);
 
+void hash_table_print(const hash_table_t *ht);
+unsigned long int get_last_element(const hash_table_t *ht);
+
 int _strcmp(const char *s1, const char *s2);
 char *_strdup(const char *str);
 char *_strcpy(char *dest, const char *src);

@@ -1,6 +1,7 @@
 #ifndef _HASH_TABLES_H_
 #define _HASH_TABLES_H_
 
+#include <stdio.h>
 #include <stdlib.h>
 
 /**
@@ -33,6 +34,17 @@ hash_node_t **array;
 } hash_table_t;
 
 hash_table_t *hash_table_create(unsigned long int size);
+
 void *_calloc(unsigned int nmemb, unsigned int size);
+
+unsigned long int hash_djb2(const unsigned char *str);
+
+unsigned long int key_index(const unsigned char *key, unsigned long int size);
+
+int hash_table_set(hash_table_t *ht, const char *key, const char *value);
+
+int _strcmp(const char *s1, const char *s2);
+char *_strdup(const char *str);
+char *_strcpy(char *dest, const char *src);
 
 #endif

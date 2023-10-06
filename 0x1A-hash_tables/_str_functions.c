@@ -1,4 +1,4 @@
-#include "hash_tables.h"
+/*#include "hash_tables.h"
 
 /**
  * _strcmp - Compare two strings.
@@ -76,3 +76,4 @@ dest[i] = '\0';
 
 return (dest);
 }
+*/

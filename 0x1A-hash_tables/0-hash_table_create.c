@@ -46,7 +46,10 @@ return (NULL);
 table->size = size;
 table->array = _calloc(table->size, sizeof(hash_node_t));
 if (table->array == NULL)
+{
+free(table);
 return (NULL);
+}
 
 for (i = 0; i < table->size; i++)
 table->array[i] = NULL;

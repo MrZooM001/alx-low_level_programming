@@ -44,7 +44,7 @@ while (*(str + length) != '\0')
 {
 length++;
 }
-arr = malloc(((length)*(sizeof(*arr))) + 1);
+arr = malloc(((length) *(sizeof(*arr))) + 1);
 if (arr == NULL)
 return (NULL);
 
@@ -78,6 +78,20 @@ return (dest);
 }
 
 /**
+ * free_hash_node - free hash_node_t node.
+ *
+ * @node: node to be freed.
+ *
+ * Return: void
+ */
+void free_hash_node(hash_node_t *node)
+{
+free(node->key);
+free(node->value);
+free(node);
+}
+
+/**
  * hash_table_set - adds an element to the hash table.
  *
  * @ht: hash table that will be added or updated with key/value.
@@ -101,11 +115,12 @@ return (0);
 
 new_node->key = _strdup(key);
 new_node->value = _strdup(value);
-new_node->next = NULL;
-
 if (new_node->key == NULL || new_node->value == NULL)
+{
+free_hash_node(new_node);
 return (0);
-
+}
+new_node->next = ht->array[index];
 if (ht->array[index] == NULL)
 ht->array[index] = new_node;
 else
@@ -115,17 +130,15 @@ while (current_node != NULL)
 {
 if (_strcmp(current_node->key, key) == 0)
 {
+free_hash_node(new_node);
 current_node->value = _strdup(value);
 if (current_node->value == NULL)
 return (0);
 return (1);
 }
-
 current_node = current_node->next;
 }
-new_node->next = ht->array[index];
 ht->array[index] = new_node;
 }
-
 return (1);
 }

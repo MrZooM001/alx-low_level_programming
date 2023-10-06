@@ -17,15 +17,17 @@ hash_node_t *node;
 if (ht == NULL || key == NULL || *key == '\0')
 return (NULL);
 
-index = hash_djb2((const unsigned char *)key) % ht->size;
+index = key_index((const unsigned char *)key, ht->size);
 node = ht->array[index];
 
-if (node != NULL)
+while (node != NULL)
 {
 if (_strcmp(node->key, key) == 0)
 {
 return (node->value);
 }
+node = node->next;
 }
+
 return (NULL);
 }

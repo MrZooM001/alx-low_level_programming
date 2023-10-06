@@ -10,21 +10,21 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	unsigned int i, length;
-	char *ptr;
+unsigned int i, length;
+char *ptr;
 
-	if (nmemb == 0 || size == 0)
-		return (NULL);
+if (nmemb == 0 || size == 0)
+return (NULL);
 
-	length = nmemb * size;
-	ptr = malloc(length);
-	if (ptr == NULL)
-		return (NULL);
+length = nmemb * size;
+ptr = malloc(length);
+if (ptr == NULL)
+return (NULL);
 
-	for (i = 0; i < length; i++)
-		ptr[i] = 0;
+for (i = 0; i < length; i++)
+ptr[i] = 0;
 
-	return (ptr);
+return (ptr);
 }
 
 /**
@@ -36,20 +36,20 @@ void *_calloc(unsigned int nmemb, unsigned int size)
  */
 hash_table_t *hash_table_create(unsigned long int size)
 {
-	hash_table_t *table;
-	unsigned long int i;
+hash_table_t *table;
+unsigned long int i;
 
-	table = malloc(sizeof(hash_node_t));
-	if (table == NULL)
-		return (NULL);
+table = malloc(sizeof(hash_node_t));
+if (table == NULL)
+return (NULL);
 
-	table->size = size;
-	table->array = _calloc(table->size, sizeof(hash_node_t));
-	if (table->array == NULL)
-		return (NULL);
+table->size = size;
+table->array = _calloc(table->size, sizeof(hash_node_t));
+if (table->array == NULL)
+return (NULL);
 
-	for (i = 0; i < table->size; i++)
-		table->array[i] = NULL;
+for (i = 0; i < table->size; i++)
+table->array[i] = NULL;
 
-	return (table);
+return (table);
 }

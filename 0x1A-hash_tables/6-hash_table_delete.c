@@ -1,9 +1,9 @@
 #include "hash_tables.h"
 
 /**
- * hash_table_print - prints a hash table.
+ * hash_table_delete - deletes a hash table.
  *
- * @ht: hash table that will be printed.
+ * @ht: hash table that will be deleted.
  *
  * Return: void.
  */
@@ -24,9 +24,7 @@ hash_node_t *tmp;
 
 tmp = node;
 node = node->next;
-free(tmp->value);
-free(tmp->key);
-free(tmp);
+free_hash_node(tmp);
 }
 }
 free(ht->array);

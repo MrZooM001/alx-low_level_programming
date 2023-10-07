@@ -86,8 +86,11 @@ return (dest);
  */
 void free_hash_node(hash_node_t *node)
 {
+if(node->key != NULL)
 free(node->key);
+if(node->value != NULL)
 free(node->value);
+if(node != NULL)
 free(node);
 }
 
@@ -107,20 +110,17 @@ unsigned long int index;
 
 if (ht == NULL || key == NULL || *key == '\0' || value == NULL)
 return (0);
-
 index = hash_djb2((const unsigned char *)key) % ht->size;
 new_node = malloc(sizeof(hash_node_t));
 if (new_node == NULL)
 return (0);
-
-new_node->key = _strdup(key);
-new_node->value = _strdup(value);
+new_node->key = _strdup(key), new_node->value = _strdup(value);
 if (new_node->key == NULL || new_node->value == NULL)
 {
 free_hash_node(new_node);
 return (0);
 }
-new_node->next = ht->array[index];
+new_node->next = NULL;
 if (ht->array[index] == NULL)
 ht->array[index] = new_node;
 else
@@ -130,15 +130,19 @@ while (current_node != NULL)
 {
 if (_strcmp(current_node->key, key) == 0)
 {
-free_hash_node(new_node);
+free(current_node->value);
 current_node->value = _strdup(value);
 if (current_node->value == NULL)
+{
+free_hash_node(new_node);
 return (0);
+}
+free_hash_node(new_node);
 return (1);
 }
 current_node = current_node->next;
 }
-ht->array[index] = new_node;
+new_node->next = ht->array[index], ht->array[index] = new_node;
 }
 return (1);
 }

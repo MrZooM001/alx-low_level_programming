@@ -187,8 +187,8 @@ ht->shead->sprev = new_node, ht->shead = new_node;
 else
 {
 current_node = ht->shead;
-while (current_node->snext != NULL)
-if (_strcmp(current_node->snext->key, key) < 0)
+while (current_node->snext != NULL
+&& _strcmp(current_node->snext->key, key) < 0)
 current_node = current_node->snext;
 new_node->snext = current_node->snext, new_node->sprev = current_node;
 if (current_node->snext == NULL)
@@ -222,8 +222,8 @@ if (index >= ht->size)
 return (NULL);
 
 node = ht->shead;
-while (node != NULL)
-if (_strcmp(node->key, key) != 0)
+while (node != NULL
+&& _strcmp(node->key, key) != 0)
 {
 node = node->snext;
 }
@@ -244,7 +244,7 @@ void shash_table_print(const shash_table_t *ht)
 {
 shash_node_t *node;
 
-if (ht == NULL || ht->shead == NULL)
+if (ht == NULL)
 return;
 
 node = ht->shead;
@@ -271,7 +271,7 @@ void shash_table_print_rev(const shash_table_t *ht)
 {
 shash_node_t *node;
 
-if (ht == NULL || ht->stail == NULL)
+if (ht == NULL)
 return;
 
 node = ht->stail;
@@ -299,7 +299,7 @@ void shash_table_delete(shash_table_t *ht)
 shash_table_t *head;
 shash_node_t *node, *tmp;
 
-if (ht == NULL || ht->shead == NULL)
+if (ht == NULL)
 return;
 
 head = ht;

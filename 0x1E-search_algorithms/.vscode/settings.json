@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "search_algos.h": "c",
+        "stdio.h": "c"
+    }
+}
